@@ -4,24 +4,17 @@ _A designer’s guide for setting up a local Drupal instance._
 
 ## ❓ Why do this?
 
-If your goal is to prepare for the [Site Builder exam](https://civicactions.atlassian.net/wiki/spaces/DES/pages/633503745/Local+Drupal+on+macOS#%F0%9F%8E%93-Certification) by taking the [Acquia course](https://civicactions.atlassian.net/wiki/spaces/DES/pages/633503745/Local+Drupal+on+macOS#%F0%9F%93%96-Course), or to have an experience that’s closer to your project’s environment, where you can install and configure specific modules, then a local sandbox will give you that control. You will need to run commands using the Terminal app and this guide will show you how. One of the nice things about running Drupal locally is that it’s super easy to start over if something goes awry.
+If your goal is to prepare for the [Site Builder exam](#certification) by taking the [Acquia course](#course), or to have an experience that’s closer to your project’s environment, where you can install and configure specific modules, then a local sandbox will give you that control. You will need to run commands using the Terminal app and this guide will show you how. One of the nice things about running Drupal locally is that it’s super easy to start over if something goes awry.
 
 A local sandbox is certainly not necessary if you just want to experiment with a Drupal site. For this you could use a service like [Pantheon](https://pantheon.io/) to create a free Drupal site, or try the [Drupal CMS launcher](https://new.drupal.org/drupal-cms/launcher) to install Drupal like a regular Mac app. These are both great options for a designer to get a Drupal instance running so that you can kick the tires and build some content.
 
 ## 📖 Course
 
-Inspired by [Kelly Smith](https://civicactions.atlassian.net/wiki/people/614106ef34599600712f3c2d?ref=confluence), some CivicActions designers took [Acquia’s Drupal Site Building course](https://community.acquiaacademy.com/learn/courses/669/drupal-site-building) beginning in April, 2025. See the [#drupal-study-group](https://civicactions.slack.com/archives/C08NLJ9USQ3) channel and the [Drupal Site Builder Meeting Notes](https://civicactions.slack.com/docs/T0297RSQF/F08NMDTJDUP) for further details.
+Acquia’s free [Drupal Site Building course](https://community.acquiaacademy.com/learn/courses/669/drupal-site-building) provides a helpful overview of Drupal’s structure and features.
 
 ## 🎓 Certification
 
-[Kelly Smith](https://civicactions.atlassian.net/wiki/people/614106ef34599600712f3c2d?ref=confluence) recommends taking the [Acquia Certified Site Builder Drupal 10/11 exam](https://www.acquia.com/support/training-certification/acquia-certification/drupal-certification-track): 75 minutes, $155.
-
-As of 16 Sep 2025 four designers have attained the certification! 🎉
-
-- [Dave Pickett](https://civicactions.atlassian.net/wiki/people/629f0d39c97b1b00687acde0?ref=confluence)
-- [Kelly Smith](https://civicactions.atlassian.net/wiki/people/614106ef34599600712f3c2d?ref=confluence)    
-- [Suzanne Gray](https://civicactions.atlassian.net/wiki/people/611ebfef7b538a006996f3f9?ref=confluence)
-- [Logan House](https://civicactions.atlassian.net/wiki/people/712020:df7de6d1-8e2e-454e-ac38-2d6caad7afcf?ref=confluence)
+The [Acquia Certified Site Builder Drupal 10/11 exam](https://www.acquia.com/support/training-certification/acquia-certification/drupal-certification-track) lasts for 75 minutes and costs $155.
 
 ## ⌨️ Using the Terminal app
 
@@ -33,15 +26,11 @@ Designers getting started with the terminal can also check out Apple’s [Termin
 
 ## 🐳 Install Docker
 
-If you are running a CivicActions-managed machine, you can use the Kandji Self Service app to install it. Open Kandji and navigate to Developer Tools → Docker Desktop then choose **Install**.
-
-Otherwise you can download and install from the [Docker homepage](https://www.docker.com/). Click the **Download Docker Desktop** button and choose the appropriate version for your platform.
+Download and install from the [Docker homepage](https://www.docker.com/). Click the **Download Docker Desktop** button and choose the appropriate version for your platform.
 
 **Optional:** The Learning Center prompted me to try some tutorials when I first installed and I ran through a few of them. I have previously used Docker and still found them helpful.
 
 ## 🍺 Install Homebrew
-
-**Tip:** Homebrew is now installed by default on CivicActions machines, so if you have a CivicActions laptop you can skip to the next section.
 
 [Homebrew](https://brew.sh/) is a package management system for macOS that allows you to easily install software using the command line in Terminal. We will use it to install DDEV.
 
@@ -82,7 +71,7 @@ Here are the cmmands:
 	
 	brew upgrade
 
-**Software update note:** You should make a reminder to run **brew update** and **brew upgrade** regularly to keep Homebrew and the packages it installs updated. This is especially important for the security of your Mac. Once a week is great but once a month should be fine too. (If you have a CivicActions machine, [Bentley Hensel](https://civicactions.atlassian.net/wiki/people/635e6eee7d4645af4f02e1e2?ref=confluence) has taken care of this for you—the updates will run automatically.)
+**Software update note:** You should make a reminder to run **brew update** and **brew upgrade** regularly to keep Homebrew and the packages it installs updated. This is especially important for the security of your Mac. Once a week is great but once a month should be fine too.
 
 ## ⚙️ Install DDEV
 
@@ -104,7 +93,7 @@ Commands:
 
 ## 💧 Install Drupal
 
-This command uses Composer via DDEV to install Drupal. We’ll use the name **waterfall** as the project name because this is used in the [course](https://civicactions.atlassian.net/wiki/spaces/DES/pages/633503745/Local+Drupal+on+macOS#%F0%9F%93%96-Course), but it could be anything as long as you use hyphens between words if using more than one (e.g. **calvin-hobbes**). Choose wisely as this will become the first part of your site’s hostname (URL). These instructions are based on the  [DDEV installation guide for Drupal](https://ddev.readthedocs.io/en/stable/users/quickstart/#drupal). Thanks to [Jess Straatmann](https://civicactions.atlassian.net/wiki/people/63165cf18473817d7d056bda?ref=confluence) for setting me on the DDEV path!
+This command uses Composer via DDEV to install Drupal. We’ll use the name **waterfall** as the project name because this is used in the [course](#course), but it could be anything as long as you use hyphens between words if using more than one (e.g. **calvin-hobbes**). Choose wisely as this will become the first part of your site’s hostname (URL). These instructions are based on the  [DDEV installation guide for Drupal](https://ddev.readthedocs.io/en/stable/users/quickstart/#drupal).
 
 Commands:
 
@@ -173,7 +162,7 @@ View [https://waterfall.ddev.site](https://waterfall.ddev.site/) in your browser
 
 ## 🆕 Update Drupal
 
-These are the basic steps to update Drupal based on the instructions at [Updating Drupal core via Composer](https://www.drupal.org/docs/updating-drupal/updating-drupal-core-via-composer). However, it is wise to back up your Drupal site first in case something goes wrong with the Drupal update. See [Back up Drupal](https://civicactions.atlassian.net/wiki/spaces/DES/pages/633503745/Local+Drupal+on+macOS#%F0%9F%97%84%EF%B8%8F-Back-up-Drupal) for how to do this.
+These are the basic steps to update Drupal based on the instructions at [Updating Drupal core via Composer](https://www.drupal.org/docs/updating-drupal/updating-drupal-core-via-composer). However, it is wise to back up your Drupal site first in case something goes wrong with the Drupal update. See [Back up Drupal](#back-up-drupal) for how to do this.
 
 Commands:
 
@@ -215,11 +204,11 @@ Commands:
 	
 	ddev drush pm-list --type=Module --status=enabled
 
-Knowing which non-core modules you are running can be helpful if you want to keep a record of the composer require <package name> modules you would want to install in a new project.
+Knowing which non-core modules you are running can be helpful if you want to keep a record of the `composer require <package name>` modules you would want to install in a new project.
 
 ## 🗄️ Back up Drupal
 
-It’s a good idea to back up Drupal before [updating](https://civicactions.atlassian.net/wiki/spaces/DES/pages/633503745/Local+Drupal+on+macOS#%F0%9F%86%95-Update-Drupal). These instructions are based on [Back up & Restore / migrate your composer-managed site using the command line](https://www.drupal.org/docs/develop/using-composer/back-up-restore-migrate-your-composer-managed-site-using-the-command-line).
+It’s a good idea to back up Drupal before [updating](#update-drupal). These instructions are based on [Back up & Restore / migrate your composer-managed site using the command line](https://www.drupal.org/docs/develop/using-composer/back-up-restore-migrate-your-composer-managed-site-using-the-command-line).
 
 ### Make a database snapshot
 
@@ -280,15 +269,15 @@ Make a copy of the **files** folder. For example, you could create a folder in y
 
 ## 🪄 Restore Drupal
 
-If something does go wrong with the [Drupal update](https://civicactions.atlassian.net/wiki/spaces/DES/pages/633503745/Local+Drupal+on+macOS#%F0%9F%86%95-Update-Drupal), and you need to restore your local Drupal site, then as long as you [Backed up Drupal](https://civicactions.atlassian.net/wiki/spaces/DES/pages/633503745/Local+Drupal+on+macOS#%F0%9F%97%84%EF%B8%8F-Back-up-Drupal) all is not lost!
+If something does go wrong with the [Drupal update](#update-drupal), and you need to restore your local Drupal site, then as long as you [Backed up Drupal](#back-up-drupal) all is not lost!
 
 ### Rebuild the project
 
-**Tip:** If your project is still in place and you just want to change the database, skip to [Restore the database](https://civicactions.atlassian.net/wiki/spaces/DES/pages/633503745/Local+Drupal+on+macOS#Restore-the-database). This section is only if you have to completely rebuild from a backup.
+**Tip:** If your project is still in place and you just want to change the database, skip to [Restore the database](#restore-the-database). This section is only if you have to completely rebuild from a backup.
 
 If you are starting over completely, your first step is to rebuild the Drupal site as you originally did. Rename your original folder to something else (e.g. from “waterfall” to “waterfall-old”). 
 
-Then revisit the [Install Drupal](https://civicactions.atlassian.net/wiki/spaces/DES/pages/633503745/Local+Drupal+on+macOS#%F0%9F%92%A7-Install-Drupal) instructions and repeat those steps to recreate your waterfall project. Note that if you installed additional modules since first setting up your project, add those additional modules to your setup steps at this point.
+Then revisit the [Install Drupal](#install-drupal) instructions and repeat those steps to recreate your waterfall project. Note that if you installed additional modules since first setting up your project, add those additional modules to your setup steps at this point.
 
 For example:
 
@@ -350,3 +339,7 @@ That’s it! You should now be able to visit your site at [https://waterfall.dde
 -   Designers getting started with the terminal can check out Apple’s [Terminal User Guide](https://support.apple.com/guide/terminal/welcome/mac). 
 -   Drupal provides a guide to [getting started with DDEV](https://new.drupal.org/docs/drupal-cms/get-started/install-drupal-cms/install-drupal-cms-locally-with-ddev) which might suit advanced users.
 -   Take a look at [Getting started with VS Code](https://code.visualstudio.com/docs/introvideos/basics), a popular free code editor from Microsoft.
+
+## ✨ Credits
+
+Special thanks to [Kelly Smith](https://github.com/kellysmith1008), [Jessica Straatmann](https://github.com/jastraat), and [Daniel Mundra](https://github.com/dmundra) for their assistance.

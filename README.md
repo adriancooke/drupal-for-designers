@@ -12,6 +12,3 @@ The goal of this documentation is to help those in non-technical (or not *primar
 
 * [Adrian Cooke](https://github.com/adriancooke)
 
-## ✨ Credits
-
-Special thanks to [Jessica Straatmann](https://github.com/jastraat) and [Daniel Mundra](https://github.com/dmundra) for assistance.
