@@ -4,7 +4,7 @@ _A designer’s guide for setting up a local Drupal instance._
 
 ## ❓ Why do this?
 
-If your goal is to prepare for the [Site Builder exam](#certification) by taking the [Acquia course](#course), or to have an experience that’s closer to your project’s environment, where you can install and configure specific modules, then a local sandbox will give you that control. You will need to run commands using the Terminal app and this guide will show you how. One of the nice things about running Drupal locally is that it’s super easy to start over if something goes awry.
+If your goal is to prepare for the [Site Builder exam](#-certification) by taking the [Acquia course](#-course), or to have an experience that’s closer to your project’s environment, where you can install and configure specific modules, then a local sandbox will give you that control. You will need to run commands using the Terminal app and this guide will show you how. One of the nice things about running Drupal locally is that it’s super easy to start over if something goes awry.
 
 A local sandbox is certainly not necessary if you just want to experiment with a Drupal site. For this you could use a service like [Pantheon](https://pantheon.io/) to create a free Drupal site, or try the [Drupal CMS launcher](https://new.drupal.org/drupal-cms/launcher) to install Drupal like a regular Mac app. These are both great options for a designer to get a Drupal instance running so that you can kick the tires and build some content.
 
@@ -20,7 +20,9 @@ The [Acquia Certified Site Builder Drupal 10/11 exam](https://www.acquia.com/sup
 
 If you aren’t familiar with the macOS terminal, here’s a quick introduction to Terminal.app on your Mac. You’ll need to use the command line to install Drupal locally, install additional modules, and keep your software up-to-date. This video is an introduction that shows none of these things. It simply compares your Home folder in the Finder with the same view of the filesystem using Terminal, and demonstrates a few basic commands, to help you get a feel for using Terminal.
 
-[![Side-by-side comparison of a macOS Finder window showing the user's Home directory on the left as a series of icons with text labels and the same data in a Terminal window on the right displayed using the ls command. You can see the 1 to 1 correspondence between the folders in the left window and the directory names in the right window.](comparing-home-directory-in-finder-vs-terminal.png)](#)
+![Side-by-side comparison of a macOS Finder window showing the user's Home directory on the left as a series of icons with text labels and the same data in a Terminal window on the right displayed using the ls command. You can see the 1 to 1 correspondence between the folders in the left window and the directory names in the right window.](media/comparing-home-directory-in-finder-vs-terminal.png)]
+
+(need to figure out best way to include a video here)
 
 Designers getting started with the terminal can also check out Apple’s [Terminal User Guide](https://support.apple.com/guide/terminal/welcome/mac).
 
@@ -93,7 +95,7 @@ Commands:
 
 ## 💧 Install Drupal
 
-This command uses Composer via DDEV to install Drupal. We’ll use the name **waterfall** as the project name because this is used in the [course](#course), but it could be anything as long as you use hyphens between words if using more than one (e.g. **calvin-hobbes**). Choose wisely as this will become the first part of your site’s hostname (URL). These instructions are based on the  [DDEV installation guide for Drupal](https://ddev.readthedocs.io/en/stable/users/quickstart/#drupal).
+This command uses Composer via DDEV to install Drupal. We’ll use the name **waterfall** as the project name because this is used in the [course](#-course), but it could be anything as long as you use hyphens between words if using more than one (e.g. **calvin-hobbes**). Choose wisely as this will become the first part of your site’s hostname (URL). These instructions are based on the  [DDEV installation guide for Drupal](https://ddev.readthedocs.io/en/stable/users/quickstart/#drupal).
 
 Commands:
 
@@ -162,7 +164,7 @@ View [https://waterfall.ddev.site](https://waterfall.ddev.site/) in your browser
 
 ## 🆕 Update Drupal
 
-These are the basic steps to update Drupal based on the instructions at [Updating Drupal core via Composer](https://www.drupal.org/docs/updating-drupal/updating-drupal-core-via-composer). However, it is wise to back up your Drupal site first in case something goes wrong with the Drupal update. See [Back up Drupal](#back-up-drupal) for how to do this.
+These are the basic steps to update Drupal based on the instructions at [Updating Drupal core via Composer](https://www.drupal.org/docs/updating-drupal/updating-drupal-core-via-composer). However, it is wise to back up your Drupal site first in case something goes wrong with the Drupal update. See [Back up Drupal](#-back-up-drupal) for how to do this.
 
 Commands:
 
@@ -208,7 +210,7 @@ Knowing which non-core modules you are running can be helpful if you want to kee
 
 ## 🗄️ Back up Drupal
 
-It’s a good idea to back up Drupal before [updating](#update-drupal). These instructions are based on [Back up & Restore / migrate your composer-managed site using the command line](https://www.drupal.org/docs/develop/using-composer/back-up-restore-migrate-your-composer-managed-site-using-the-command-line).
+It’s a good idea to back up Drupal before [updating](#-update-drupal). These instructions are based on [Back up & Restore / migrate your composer-managed site using the command line](https://www.drupal.org/docs/develop/using-composer/back-up-restore-migrate-your-composer-managed-site-using-the-command-line).
 
 ### Make a database snapshot
 
@@ -251,9 +253,9 @@ Commands
 
 Finally, to be extra-sure that your backup is safe, navigate to this file in the Finder and copy it outside of the site folder, such as in Projects → **backups** folder for safe keeping. This protects it in the event your **waterfall** site directory is overwritten or damaged.
 
-![Finder window titled Projects showing waterfall.sql in Projects - waterfall - backups. An annotation on the filename says Copy.](project-waterfall-backups-waterfall-sql.png)
+![Finder window titled Projects showing waterfall.sql in Projects - waterfall - backups. An annotation on the filename says Copy.](media/project-waterfall-backups-waterfall-sql.png)
 
-![Finder window titled Projects showing waterfall.sql in Projects - backups. An annotation on the filename says Paste.](project-backups-waterfall-sql-copy.png)
+![Finder window titled Projects showing waterfall.sql in Projects - backups. An annotation on the filename says Paste.](media/project-backups-waterfall-sql-copy.png)
 
 **Make a copy of site files**
 
@@ -261,23 +263,23 @@ Finally, to be extra-sure that your backup is safe, navigate to this file in the
 
 To back up your local copy of Drupal (both the files and database) you need to copy some files and run some commands. You can use the Finder to make a copy of your site files. Navigate into the project folder, and find **web/sites/default**:
 
-![macOS Finder window titled Projects in list view showing open path to waterfall - web - sites - default - files.](project-web-sites-default-files.png)
+![macOS Finder window titled Projects in list view showing open path to waterfall - web - sites - default - files.](media/project-web-sites-default-files.png)
 
 Make a copy of the **files** folder. For example, you could create a folder in your Projects directory called **backups** and copy/paste **files** there.
 
-![Finder window in Projects showing a copy of files in backups](project-backups-files.png)
+![Finder window in Projects showing a copy of files in backups](media/project-backups-files.png)
 
 ## 🪄 Restore Drupal
 
-If something does go wrong with the [Drupal update](#update-drupal), and you need to restore your local Drupal site, then as long as you [Backed up Drupal](#back-up-drupal) all is not lost!
+If something does go wrong with the [Drupal update](#-update-drupal), and you need to restore your local Drupal site, then as long as you [Backed up Drupal](#-back-up-drupal) all is not lost!
 
 ### Rebuild the project
 
-**Tip:** If your project is still in place and you just want to change the database, skip to [Restore the database](#restore-the-database). This section is only if you have to completely rebuild from a backup.
+**Tip:** If your project is still in place and you just want to change the database, skip to [Restore the database](#-restore-the-database). This section is only if you have to completely rebuild from a backup.
 
 If you are starting over completely, your first step is to rebuild the Drupal site as you originally did. Rename your original folder to something else (e.g. from “waterfall” to “waterfall-old”). 
 
-Then revisit the [Install Drupal](#install-drupal) instructions and repeat those steps to recreate your waterfall project. Note that if you installed additional modules since first setting up your project, add those additional modules to your setup steps at this point.
+Then revisit the [Install Drupal](#-install-drupal) instructions and repeat those steps to recreate your waterfall project. Note that if you installed additional modules since first setting up your project, add those additional modules to your setup steps at this point.
 
 For example:
 
