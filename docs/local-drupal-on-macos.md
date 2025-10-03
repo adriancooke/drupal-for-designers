@@ -20,7 +20,7 @@ The [Acquia Certified Site Builder Drupal 10/11 exam](https://www.acquia.com/sup
 
 If you aren’t familiar with the macOS terminal, here’s a quick introduction to Terminal.app on your Mac. You’ll need to use the command line to install Drupal locally, install additional modules, and keep your software up-to-date. This video is an introduction that shows none of these things. It simply compares your Home folder in the Finder with the same view of the filesystem using Terminal, and demonstrates a few basic commands, to help you get a feel for using Terminal.
 
-![Side-by-side comparison of a macOS Finder window showing the user's Home directory on the left as a series of icons with text labels and the same data in a Terminal window on the right displayed using the ls command. You can see the 1 to 1 correspondence between the folders in the left window and the directory names in the right window.](media/comparing-home-directory-in-finder-vs-terminal.png)]
+![Side-by-side comparison of a macOS Finder window showing the user's Home directory on the left as a series of icons with text labels and the same data in a Terminal window on the right displayed using the ls command. You can see the 1 to 1 correspondence between the folders in the left window and the directory names in the right window.](../media/comparing-home-directory-in-finder-vs-terminal.png)]
 
 (need to figure out best way to include a video here)
 
@@ -253,9 +253,9 @@ Commands
 
 Finally, to be extra-sure that your backup is safe, navigate to this file in the Finder and copy it outside of the site folder, such as in Projects → **backups** folder for safe keeping. This protects it in the event your **waterfall** site directory is overwritten or damaged.
 
-![Finder window titled Projects showing waterfall.sql in Projects - waterfall - backups. An annotation on the filename says Copy.](media/project-waterfall-backups-waterfall-sql.png)
+![Finder window titled Projects showing waterfall.sql in Projects - waterfall - backups. An annotation on the filename says Copy.](../media/project-waterfall-backups-waterfall-sql.png)
 
-![Finder window titled Projects showing waterfall.sql in Projects - backups. An annotation on the filename says Paste.](media/project-backups-waterfall-sql-copy.png)
+![Finder window titled Projects showing waterfall.sql in Projects - backups. An annotation on the filename says Paste.](../media/project-backups-waterfall-sql-copy.png)
 
 **Make a copy of site files**
 
@@ -263,11 +263,11 @@ Finally, to be extra-sure that your backup is safe, navigate to this file in the
 
 To back up your local copy of Drupal (both the files and database) you need to copy some files and run some commands. You can use the Finder to make a copy of your site files. Navigate into the project folder, and find **web/sites/default**:
 
-![macOS Finder window titled Projects in list view showing open path to waterfall - web - sites - default - files.](media/project-web-sites-default-files.png)
+![macOS Finder window titled Projects in list view showing open path to waterfall - web - sites - default - files.](../media/project-web-sites-default-files.png)
 
 Make a copy of the **files** folder. For example, you could create a folder in your Projects directory called **backups** and copy/paste **files** there.
 
-![Finder window in Projects showing a copy of files in backups](media/project-backups-files.png)
+![Finder window in Projects showing a copy of files in backups](../media/project-backups-files.png)
 
 ## 🪄 Restore Drupal
 
