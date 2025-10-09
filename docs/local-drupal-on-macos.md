@@ -20,7 +20,7 @@ The [Acquia Certified Site Builder Drupal 10/11 exam](https://www.acquia.com/sup
 
 If you aren’t familiar with the macOS terminal, here’s a quick introduction to Terminal.app on your Mac. You’ll need to use the command line to install Drupal locally, install additional modules, and keep your software up-to-date. This video is an introduction that shows none of these things. It simply compares your Home folder in the Finder with the same view of the filesystem using Terminal, and demonstrates a few basic commands, to help you get a feel for using Terminal.
 
-![Side-by-side comparison of a macOS Finder window showing the user's Home directory on the left as a series of icons with text labels and the same data in a Terminal window on the right displayed using the ls command. You can see the 1 to 1 correspondence between the folders in the left window and the directory names in the right window.](../media/comparing-home-directory-in-finder-vs-terminal.png)]
+![Side-by-side comparison of a macOS Finder window showing the user's Home directory on the left as a series of icons with text labels and the same data in a Terminal window on the right displayed using the ls command. You can see the 1 to 1 correspondence between the folders in the left window and the directory names in the right window.](../media/comparing-home-directory-in-finder-vs-terminal.png)
 
 (need to figure out best way to include a video here)
 
@@ -45,33 +45,35 @@ We are going to install Homebrew exactly as instructed on their website. The fir
 -   Be sure to read the comments but type only the commands. The pound sign # indicates comments. The commands are the text that is not prefixed by # on each line. 
 -   Some commands take time to run. Give each command time to execute. Wait until you see the command prompt with a blinking cursor before typing more commands.
 
-Here are the cmmands:
+Here are the commands:
 
-	# install Homebrew from GitHub
-	
-	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-	
-	# determine your username 
-	
-	whoami
-	
-	# The next commands make it easier to run homebrew from
-	# the terminal. Read the output of the previous command 
-	# and look for “Next steps". If the instructions you 
-	# see differ from below, use what you see be sure to 
-	# replace your-username with your own username
-	
-	echo >> /Users/your-username/.zprofile
-	
-	echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/your-username/.zprofile
-	
-	eval "$(/opt/homebrew/bin/brew shellenv)"
-	
-	# update homebrew
-	
-	brew update
-	
-	brew upgrade
+```zsh
+# install Homebrew from GitHub
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# determine your username 
+
+whoami
+
+# The next commands make it easier to run homebrew from
+# the terminal. Read the output of the previous command 
+# and look for “Next steps". If the instructions you 
+# see differ from below, use what you see be sure to 
+# replace your-username with your own username
+
+echo >> /Users/your-username/.zprofile
+
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/your-username/.zprofile
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# update homebrew
+
+brew update
+
+brew upgrade
+```
 
 **Software update note:** You should make a reminder to run **brew update** and **brew upgrade** regularly to keep Homebrew and the packages it installs updated. This is especially important for the security of your Mac. Once a week is great but once a month should be fine too.
 
@@ -81,13 +83,15 @@ The next step is  to install DDEV, a tool for creating local web development en
 
 Commands:
 
-	# use Homebrew to install DDEV
-	
-	brew install ddev/ddev/ddev
-	
-	# One-time initialization of mkcert
-	
-	mkcert -install
+```zsh
+# use Homebrew to install DDEV
+
+brew install ddev/ddev/ddev
+
+# One-time initialization of mkcert
+
+mkcert -install
+```
 
 **Git note:** If you have previously installed git, your system may pop up a dialog that says “git-credential-osxkeychain wants to use your confidential information stored in ‘github.com’ in your keychain”. It is safe to enter your Mac password and **Always Allow** this.
 
@@ -99,56 +103,58 @@ This command uses Composer via DDEV to install Drupal. We’ll use the name **wa
 
 Commands:
 
-	# list the files in your home directory
-	
-	cd
-	
-	ls -al
-	
-	# decide where you want your local site files to live 
-	# e.g. create a folder called Projects and change into 
-	# it you only need to create this directory once 
-	
-	mkdir Projects && cd Projects
-	
-	# make a directory for this project and change into it
-	# each project will need its own directory like this
-	
-	mkdir waterfall && cd waterfall
-	
-	# print working directory to see where you are
-	
-	pwd
-	
-	# configure a Drupal 11 project here and set the 
-	# document root to web
-	
-	ddev config --project-type=drupal11 --docroot=web
-	
-	# initialize ddev in the waterfall directory
-	
-	ddev start
-	
-	# use ddev and composer to create a Drupal 11 project 
-	# with the above config
-	
-	ddev composer create-project "drupal/recommended-project:^11"
-	
-	# install drush, admin_toolbar, other useful modules
-	
-	ddev composer require drush/drush
-	
-	ddev composer require drupal/admin_toolbar
-	
-	# these are the ones I use but you may not need them
-	
-	ddev composer require drupal/metatag
-	
-	ddev composer require drupal/pathauto
-	
-	ddev composer require drupal/redirect
-	
-	ddev composer require drupal/simple_sitemap
+```zsh
+# list the files in your home directory
+
+cd
+
+ls -al
+
+# decide where you want your local site files to live 
+# e.g. create a folder called Projects and change into 
+# it you only need to create this directory once 
+
+mkdir Projects && cd Projects
+
+# make a directory for this project and change into it
+# each project will need its own directory like this
+
+mkdir waterfall && cd waterfall
+
+# print working directory to see where you are
+
+pwd
+
+# configure a Drupal 11 project here and set the 
+# document root to web
+
+ddev config --project-type=drupal11 --docroot=web
+
+# initialize ddev in the waterfall directory
+
+ddev start
+
+# use ddev and composer to create a Drupal 11 project 
+# with the above config
+
+ddev composer create-project "drupal/recommended-project:^11"
+
+# install drush, admin_toolbar, other useful modules
+
+ddev composer require drush/drush
+
+ddev composer require drupal/admin_toolbar
+
+# these are the ones I use but you may not need them
+
+ddev composer require drupal/metatag
+
+ddev composer require drupal/pathauto
+
+ddev composer require drupal/redirect
+
+ddev composer require drupal/simple_sitemap
+```
 
 Behold the result!
 
@@ -168,43 +174,47 @@ These are the basic steps to update Drupal based on the instructions at [Updatin
 
 Commands:
 
-	# in Terminal, navigate to your project folder
-	
-	cd ~/Projects/waterfall
-	
-	# check for Drupal updates 
-	
-	ddev composer outdated "drupal/*"
-	
-	# update drush 
-	
-	ddev composer update drush/drush
-	
-	# choose: if you want to update Drupal only specify `core-`
-	
-	ddev composer update "drupal/core-*" --with-all-dependencies
-	
-	# or: if you want to update modules as well omit `core-`
-	
-	ddev composer update "drupal/*" --with-all-dependencies
-	
-	# update database and rebuild cache
-	
-	ddev drush updatedb
-	
-	ddev drush cache:rebuild
+```zsh
+# in Terminal, navigate to your project folder
+
+cd ~/Projects/waterfall
+
+# check for Drupal updates 
+
+ddev composer outdated "drupal/*"
+
+# update drush 
+
+ddev composer update drush/drush
+
+# choose: if you want to update Drupal only specify `core-`
+
+ddev composer update "drupal/core-*" --with-all-dependencies
+
+# or: if you want to update modules as well omit `core-`
+
+ddev composer update "drupal/*" --with-all-dependencies
+
+# update database and rebuild cache
+
+ddev drush updatedb
+
+ddev drush cache:rebuild
+```
 
 At some point you might want to know which non-core modules you have installed. While you can check for this information in the admin UI, there’s also a command you can run that provides a simple list:
 
 Commands:
 
-	# list all enabled non-core modules
-	
-	ddev drush pm-list --type=Module --no-core --status=enabled
-	
-	# or: list all enabled modules including core
-	
-	ddev drush pm-list --type=Module --status=enabled
+```zsh
+# list all enabled non-core modules
+
+ddev drush pm-list --type=Module --no-core --status=enabled
+
+# or: list all enabled modules including core
+
+ddev drush pm-list --type=Module --status=enabled
+```
 
 Knowing which non-core modules you are running can be helpful if you want to keep a record of the `composer require <package name>` modules you would want to install in a new project.
 
@@ -220,36 +230,40 @@ The most straightforward method is to use a DDEV command called **snapshot**. Wh
 
 Commands:
 	
-	# in Terminal, navigate to your project folder
-	
-	cd ~/Projects/waterfall
-	
-	# Create a snapshot 
-	# (will start container if not already running)
-	
-	ddev snapshot
-	
-	# That's it! Your snapshot will have the date and 
-	# time appended. You can view all your snapshots 
-	# using the --list option.
-	
-	ddev snapshot --list
+```zsh
+# in Terminal, navigate to your project folder
+
+cd ~/Projects/waterfall
+
+# Create a snapshot 
+# (will start container if not already running)
+
+ddev snapshot
+
+# That's it! Your snapshot will have the date and 
+# time appended. You can view all your snapshots 
+# using the --list option.
+
+ddev snapshot --list
+```
 
 Another method  is to use the Drush **sql-dump** command. While **snapshot** is dependent on your database version, **sql-dump** is not. This will rarely matter, but might be a good idea occasionally if you want to keep a more robust copy of your local site’s database that could be imported into a future version of mysql/mariadb, or to recreate your site elsewhere. This makes it more portable.
 
 Commands
 
-	# in Terminal, navigate to your project folder, e.g.
-	
-	cd ~/Projects/waterfall
-	
-	# create a folder where drush can put your backup file
-	
-	mkdir backups
-	
-	# export your database using a meaningful backup filename before .sql
-	
-	ddev drush sql-dump > backups/waterfall.sql
+```zsh
+# in Terminal, navigate to your project folder, e.g.
+
+cd ~/Projects/waterfall
+
+# create a folder where drush can put your backup file
+
+mkdir backups
+
+# export your database using a meaningful backup filename before .sql
+
+ddev drush sql-dump > backups/waterfall.sql
+```
 
 Finally, to be extra-sure that your backup is safe, navigate to this file in the Finder and copy it outside of the site folder, such as in Projects → **backups** folder for safe keeping. This protects it in the event your **waterfall** site directory is overwritten or damaged.
 
@@ -283,12 +297,14 @@ Then revisit the [Install Drupal](#-install-drupal) instructions and repeat thos
 
 For example:
 
-	# I added these modules after initial setup 
-	# so I would include them now
-	
-	ddev composer require drupal/simple\_sitemap
-	
-	ddev composer require drupal/metatag
+```zsh
+# I added these modules after initial setup 
+# so I would include them now
+
+ddev composer require drupal/simple\_sitemap
+
+ddev composer require drupal/metatag
+```
 
 ### Copy files
 
@@ -304,16 +320,18 @@ Now that your project is rebuilt and your files are copied back, the last step i
 
 To restore your database from a DDEV snapshot, run these commands:
 
-	# navigate to your project folder
-	
-	cd ~/Projects/waterfall
-	
-	# invoke the snapshot restore command
-	
-	ddev snapshot restore
-	
-	# if you see more than one, use arrow keys to select 
-	# the verison then press Enter
+```zsh
+# navigate to your project folder
+
+cd ~/Projects/waterfall
+
+# invoke the snapshot restore command
+
+ddev snapshot restore
+
+# if you see more than one, use arrow keys to select 
+# the verison then press Enter
+```
 
 Easy, right? It’s probably a good idea to create snapshots before you make big configuration changes or after you create a significant amount of new content.
 
@@ -321,18 +339,20 @@ Easy, right? It’s probably a good idea to create snapshots before you make big
 
 To restore your database from a sql file created using sql-dump, run these commands:
 
-	# navigate to your project folder
-	
-	cd ~/Projects/waterfall
-	
-	# restore your database using the file you copied 
-	# in the Copy files step
-	
-	ddev drush sqlc < backups/waterfall.sql
-	
-	# clear the site cache
-	
-	ddev drush cache:rebuild
+```zsh
+# navigate to your project folder
+
+cd ~/Projects/waterfall
+
+# restore your database using the file you copied 
+# in the Copy files step
+
+ddev drush sqlc < backups/waterfall.sql
+
+# clear the site cache
+
+ddev drush cache:rebuild
+```
 
 That’s it! You should now be able to visit your site at [https://waterfall.ddev.site](https://waterfall.ddev.site/).
 
