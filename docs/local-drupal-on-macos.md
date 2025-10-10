@@ -22,7 +22,9 @@ If you aren’t familiar with the macOS terminal, here’s a quick introduction 
 
 ![Side-by-side comparison of a macOS Finder window showing the user's Home directory on the left as a series of icons with text labels and the same data in a Terminal window on the right displayed using the ls command. You can see the 1 to 1 correspondence between the folders in the left window and the directory names in the right window.](../media/comparing-home-directory-in-finder-vs-terminal.png)
 
-(need to figure out best way to include a video here)
+https://www.youtube.com/watch?v=7cZyYcbcDl4
+
+[📺 Watch the video on YouTube (11 mins)](https://www.youtube.com/watch?v=7cZyYcbcDl4)
 
 Designers getting started with the terminal can also check out Apple’s [Terminal User Guide](https://support.apple.com/guide/terminal/welcome/mac).
 
