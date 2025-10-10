@@ -18,13 +18,9 @@ The [Acquia Certified Site Builder Drupal 10/11 exam](https://www.acquia.com/sup
 
 ## ⌨️ Using the Terminal app
 
-If you aren’t familiar with the macOS terminal, here’s a quick introduction to Terminal.app on your Mac. You’ll need to use the command line to install Drupal locally, install additional modules, and keep your software up-to-date. This video is an introduction that shows none of these things. It simply compares your Home folder in the Finder with the same view of the filesystem using Terminal, and demonstrates a few basic commands, to help you get a feel for using Terminal.
+If you aren’t familiar with the macOS terminal, here’s a quick [introduction to Terminal.app on your Mac (11 mins)](https://www.youtube.com/watch?v=7cZyYcbcDl4). You’ll need to use the command line to install Drupal locally, install additional modules, and keep your software up-to-date. This video is an introduction that shows none of these things. It simply compares your Home folder in the Finder with the same view of the filesystem using Terminal, and demonstrates a few basic commands, to help you get a feel for using Terminal.
 
 ![Side-by-side comparison of a macOS Finder window showing the user's Home directory on the left as a series of icons with text labels and the same data in a Terminal window on the right displayed using the ls command. You can see the 1 to 1 correspondence between the folders in the left window and the directory names in the right window.](../media/comparing-home-directory-in-finder-vs-terminal.png)
-
-https://www.youtube.com/watch?v=7cZyYcbcDl4
-
-[📺 Watch the video on YouTube (11 mins)](https://www.youtube.com/watch?v=7cZyYcbcDl4)
 
 Designers getting started with the terminal can also check out Apple’s [Terminal User Guide](https://support.apple.com/guide/terminal/welcome/mac).
 
