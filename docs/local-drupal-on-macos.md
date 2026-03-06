@@ -359,6 +359,7 @@ That’s it! You should now be able to visit your site at [https://waterfall.dde
 -   Designers getting started with the terminal can check out Apple’s [Terminal User Guide](https://support.apple.com/guide/terminal/welcome/mac). 
 -   Drupal provides a guide to [getting started with DDEV](https://new.drupal.org/docs/drupal-cms/get-started/install-drupal-cms/install-drupal-cms-locally-with-ddev) which might suit advanced users.
 -   Take a look at [Getting started with VS Code](https://code.visualstudio.com/docs/introvideos/basics), a popular free code editor from Microsoft.
+-	If you’re interested in a similar guide that goes further into site configuration and site building, take a look at [How to build a professional travel website with Drupal](https://drupal-guide-one.vercel.app/).
 
 ## ✨ Credits
 
